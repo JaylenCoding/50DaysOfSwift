@@ -5,9 +5,9 @@ One demo a day, keep coding for 50 days with Swift. The struggle of a growing iO
 
 -- 
 
-#Project GIF Showcase
+# Project GIF Showcase
 
-##Day 1 - Chronograph
+## Day 1 - Chronograph
 ```
 Point: Timer、Storyboard
 ```
