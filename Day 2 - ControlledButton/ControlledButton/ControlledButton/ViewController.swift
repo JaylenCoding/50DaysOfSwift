@@ -111,7 +111,7 @@ extension ViewController {
         animation.toValue = (M_1_PI)
         // 恢复原样
         animation.autoreverses = true
-        // 设置抖动中心
+        // 设置抖动中心点
         self.mainButton.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.mainButton.layer.add(animation, forKey: "rotation.z")
         
