@@ -88,6 +88,10 @@ extension ViewController {
         let pinchGes = UIPinchGestureRecognizer(target: self, action: #selector(pinchAction(_:)))
         pinchGes.delegate = self
         self.mainButton.addGestureRecognizer(pinchGes)
+        
+        let rotationGes = UIRotationGestureRecognizer(target: self, action: #selector(rotationAction(_:)))
+        rotationGes.delegate = self
+        self.mainButton.addGestureRecognizer(rotationGes)
     }
     
 }
@@ -145,11 +149,27 @@ extension ViewController {
     func pinchAction(_ pinchGes: UIPinchGestureRecognizer) {
         NSLog("Pinch Action")
         
+        // 获取缩放比例
         let pinchScale = pinchGes.scale
         self.mainButton.transform = self.mainButton.transform.scaledBy(x: pinchScale, y: pinchScale);
         
         // 清空一下，防止比例叠加
         pinchGes.scale = 1.0
+    }
+    
+    func rotationAction(_ rotationGes: UIRotationGestureRecognizer) {
+        NSLog("Rotation Action")
+        
+        let rotationR = rotationGes.rotation
+        self.mainButton.transform = self.mainButton.transform.rotated(by: rotationR)
+        
+        // 清空一下，防止角度叠加
+        rotationGes.rotation = 0.0
+    }
+    
+    // 允许同时响应多个手势
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
     
 }
