@@ -10,7 +10,6 @@ import UIKit
 
 fileprivate let kButtonH: CGFloat = 200
 
-
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // 控件
