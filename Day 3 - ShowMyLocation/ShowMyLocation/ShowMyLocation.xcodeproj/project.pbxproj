@@ -12,6 +12,7 @@
 		E70423E61F0531A200CC9941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70423E41F0531A200CC9941 /* Main.storyboard */; };
 		E70423E81F0531A200CC9941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70423E71F0531A200CC9941 /* Assets.xcassets */; };
 		E70423EB1F0531A200CC9941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70423E91F0531A200CC9941 /* LaunchScreen.storyboard */; };
+		E7678C6E1F094A4C00D93644 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7678C6D1F094A4C00D93644 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E70423E71F0531A200CC9941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E70423EA1F0531A200CC9941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E70423EC1F0531A200CC9941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7678C6D1F094A4C00D93644 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7678C6E1F094A4C00D93644 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				E70423DF1F0531A200CC9941 /* ShowMyLocation */,
 				E70423DE1F0531A200CC9941 /* Products */,
+				E7678C6C1F094A4C00D93644 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				E70423EC1F0531A200CC9941 /* Info.plist */,
 			);
 			path = ShowMyLocation;
+			sourceTree = "<group>";
+		};
+		E7678C6C1F094A4C00D93644 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7678C6D1F094A4C00D93644 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +108,7 @@
 				TargetAttributes = {
 					E70423DC1F0531A200CC9941 = {
 						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -260,10 +272,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShowMyLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.minecode.ShowMyLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +286,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShowMyLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.minecode.ShowMyLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +315,7 @@
 				E70423F11F0531A200CC9941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
