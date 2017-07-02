@@ -48,15 +48,16 @@ extension ViewController {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // 将经纬度转化成地址
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {
-        (placemark, error) -> Void in
+        (placemarks, error) -> Void in
             
             if error != nil {
                 self.locationLabel.text = "Reverse geocoder failed with error: " + error!.localizedDescription
                 return
             }
             
-            if placemark!.count > 0 {
-                
+            if placemarks!.count > 0 {
+                let pm = placemarks![0]
+                self.displayLocationInfo(pm)
             }
             else {
                 self.locationLabel.text = "Error existed in the data received from geocoder"
@@ -74,6 +75,10 @@ extension ViewController {
         let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
         let adminstrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
         let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
+        
+        self.locationLabel.text = postalCode! + " " + locality!
+        self.locationLabel.text?.append("\n")
+        self.locationLabel.text?.append(adminstrativeArea! + ", " + country!)
         
     }
     
