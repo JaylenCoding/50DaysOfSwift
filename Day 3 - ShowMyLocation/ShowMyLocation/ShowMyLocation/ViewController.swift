@@ -55,6 +55,7 @@ extension ViewController {
                 return
             }
             
+            
             if placemarks!.count > 0 {
                 let pm = placemarks![0]
                 self.displayLocationInfo(pm)
