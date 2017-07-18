@@ -48,7 +48,7 @@
                                         </constraints>
                                         <state key="normal" image="channel_nav_more"/>
                                     </button>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nF-eA-mDV">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nF-eA-mDV">
                                         <rect key="frame" x="0.0" y="0.0" width="324" height="35"/>
                                     </scrollView>
                                 </subviews>
