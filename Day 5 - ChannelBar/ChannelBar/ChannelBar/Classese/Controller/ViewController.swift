@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var channelView: MCChannelView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

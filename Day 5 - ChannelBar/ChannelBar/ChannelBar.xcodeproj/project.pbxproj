@@ -13,6 +13,7 @@
 		E72F95551F1D8B3700EA8988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72F95531F1D8B3700EA8988 /* LaunchScreen.storyboard */; };
 		E72F95641F1D90F200EA8988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F95601F1D90F200EA8988 /* ViewController.swift */; };
 		E72F95661F1D942A00EA8988 /* news_title.json in Resources */ = {isa = PBXBuildFile; fileRef = E72F95651F1D942A00EA8988 /* news_title.json */; };
+		E72F95681F1D969E00EA8988 /* MCChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F95671F1D969E00EA8988 /* MCChannelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E72F95561F1D8B3700EA8988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72F95601F1D90F200EA8988 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E72F95651F1D942A00EA8988 /* news_title.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = news_title.json; sourceTree = "<group>"; };
+		E72F95671F1D969E00EA8988 /* MCChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCChannelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		E72F95631F1D90F200EA8988 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E72F95671F1D969E00EA8988 /* MCChannelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			files = (
 				E72F95641F1D90F200EA8988 /* ViewController.swift in Sources */,
 				E72F954B1F1D8B3700EA8988 /* AppDelegate.swift in Sources */,
+				E72F95681F1D969E00EA8988 /* MCChannelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

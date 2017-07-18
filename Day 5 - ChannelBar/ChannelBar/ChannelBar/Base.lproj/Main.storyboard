@@ -1,26 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="khX-HC-FlX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="GSd-ro-nbs">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="khX-HC-FlX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tmu-7j-yhT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ld8-Ii-Xdo" kind="relationship" relationship="rootViewController" id="nvW-C9-ZVx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8og-6e-5aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="139"/>
+        </scene>
+        <!--网易新闻-->
+        <scene sceneID="9fc-05-rRG">
+            <objects>
+                <viewController id="Ld8-Ii-Xdo" customClass="ViewController" customModule="ChannelBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="jIu-Ae-YWo"/>
+                        <viewControllerLayoutGuide type="bottom" id="cop-sc-XNZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="eo7-8J-p6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKr-WW-Dsc" customClass="MCChannelView" customModule="ChannelBar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONt-6n-dHW">
+                                        <rect key="frame" x="332" y="-0.5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ULg-KO-IYk"/>
+                                            <constraint firstAttribute="width" constant="35" id="dXT-hC-Qza"/>
+                                        </constraints>
+                                        <state key="normal" image="channel_nav_more"/>
+                                    </button>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nF-eA-mDV">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="35"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ONt-6n-dHW" firstAttribute="centerY" secondItem="gKr-WW-Dsc" secondAttribute="centerY" id="Pk9-oo-5du"/>
+                                    <constraint firstItem="5nF-eA-mDV" firstAttribute="top" secondItem="gKr-WW-Dsc" secondAttribute="top" id="RRH-Sx-2uP"/>
+                                    <constraint firstItem="5nF-eA-mDV" firstAttribute="centerY" secondItem="gKr-WW-Dsc" secondAttribute="centerY" id="Ys1-PM-WQB"/>
+                                    <constraint firstAttribute="bottom" secondItem="5nF-eA-mDV" secondAttribute="bottom" id="ccu-YT-V1D"/>
+                                    <constraint firstItem="5nF-eA-mDV" firstAttribute="leading" secondItem="gKr-WW-Dsc" secondAttribute="leading" id="llK-GH-McD"/>
+                                    <constraint firstItem="ONt-6n-dHW" firstAttribute="leading" secondItem="5nF-eA-mDV" secondAttribute="trailing" constant="8" id="ofB-cS-3ja"/>
+                                    <constraint firstAttribute="height" constant="35" id="vXX-H8-nfa"/>
+                                    <constraint firstAttribute="trailing" secondItem="ONt-6n-dHW" secondAttribute="trailing" constant="8" id="zIl-LX-FwV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="scrollView" destination="5nF-eA-mDV" id="Kdo-9K-EbM"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gKr-WW-Dsc" secondAttribute="trailing" id="Rp6-57-Y2w"/>
+                            <constraint firstItem="gKr-WW-Dsc" firstAttribute="leading" secondItem="eo7-8J-p6d" secondAttribute="leading" id="SZ4-Mr-6Yg"/>
+                            <constraint firstItem="gKr-WW-Dsc" firstAttribute="top" secondItem="jIu-Ae-YWo" secondAttribute="bottom" id="Ym8-FD-vhn"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="网易新闻" id="6Eo-8C-yr0"/>
+                    <connections>
+                        <outlet property="channelView" destination="gKr-WW-Dsc" id="nuQ-8r-cLG"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yg0-5S-FOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="429.60000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="channel_nav_more" width="144" height="144"/>
+    </resources>
 </document>
