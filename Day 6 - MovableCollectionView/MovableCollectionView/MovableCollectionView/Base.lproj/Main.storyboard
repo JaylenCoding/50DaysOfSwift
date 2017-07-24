@@ -65,14 +65,29 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fKB-Vn-j8G">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellId" id="fKB-Vn-j8G" customClass="MCTextCollectionViewCell" customModule="MovableCollectionView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMx-kR-0PF">
+                                            <rect key="frame" x="25" y="36" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GMx-kR-0PF" firstAttribute="centerX" secondItem="fKB-Vn-j8G" secondAttribute="centerX" id="ils-ND-hfg"/>
+                                    <constraint firstItem="GMx-kR-0PF" firstAttribute="centerY" secondItem="fKB-Vn-j8G" secondAttribute="centerY" id="tU5-Ni-Imt"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="textLabel" destination="GMx-kR-0PF" id="h3a-KY-lzN"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -108,14 +123,29 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YT9-zN-JpY">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellId" id="YT9-zN-JpY" customClass="MCTextCollectionViewCell" customModule="MovableCollectionView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmU-pl-SOh">
+                                                    <rect key="frame" x="25" y="36" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="bmU-pl-SOh" firstAttribute="centerY" secondItem="YT9-zN-JpY" secondAttribute="centerY" id="2Ke-Nr-QT0"/>
+                                            <constraint firstItem="bmU-pl-SOh" firstAttribute="centerX" secondItem="YT9-zN-JpY" secondAttribute="centerX" id="VSZ-br-Ejw"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="textLabel" destination="bmU-pl-SOh" id="P2z-fe-prM"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

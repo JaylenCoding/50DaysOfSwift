@@ -23,7 +23,7 @@ enum VC: String {
     }
 }
 
-let cellID: String = "CellId"
+private let cellID: String = "CellId"
 
 class MCMainViewController: UITableViewController {
     
