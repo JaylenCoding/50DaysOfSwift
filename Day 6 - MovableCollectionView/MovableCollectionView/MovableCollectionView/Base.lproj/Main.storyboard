@@ -112,8 +112,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cbb-Xr-k4U">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cbb-Xr-k4U">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KkB-HG-kA0">
                                     <size key="itemSize" width="92" height="92"/>
@@ -154,14 +155,6 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="FlK-b0-G5P" firstAttribute="top" secondItem="cbb-Xr-k4U" secondAttribute="bottom" id="3UP-sW-naY"/>
-                            <constraint firstItem="cbb-Xr-k4U" firstAttribute="top" secondItem="rXx-C8-ZKN" secondAttribute="bottom" id="6gu-zg-fn2"/>
-                            <constraint firstItem="cbb-Xr-k4U" firstAttribute="leading" secondItem="cdb-Ep-ohy" secondAttribute="leading" id="89o-b5-CwQ"/>
-                            <constraint firstAttribute="trailing" secondItem="cbb-Xr-k4U" secondAttribute="trailing" id="BRA-qN-0H5"/>
-                            <constraint firstItem="cbb-Xr-k4U" firstAttribute="leading" secondItem="cdb-Ep-ohy" secondAttribute="leading" id="Y0r-aP-KZf"/>
-                            <constraint firstAttribute="trailing" secondItem="cbb-Xr-k4U" secondAttribute="trailing" id="iie-cb-8gh"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="cbb-Xr-k4U" id="KCr-pg-gcK"/>

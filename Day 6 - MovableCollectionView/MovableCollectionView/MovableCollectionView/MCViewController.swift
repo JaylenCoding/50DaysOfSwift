@@ -27,7 +27,7 @@ class MCViewController: UIViewController, UICollectionViewDelegate, UICollection
         super.viewDidLoad()
         
         // 消除顶部白条
-        self.automaticallyAdjustsScrollViewInsets = false
+        //self.automaticallyAdjustsScrollViewInsets = false
         
         // 添加长按手势, 不使用CollectionViewController的时候需要自行设置手势
         let longPressGes = UILongPressGestureRecognizer(target: self, action: #selector(longPressAction(_:)))
