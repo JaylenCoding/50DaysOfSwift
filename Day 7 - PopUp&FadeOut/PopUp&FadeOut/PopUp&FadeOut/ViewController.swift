@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var bkgView: UIView!
     var popupView: UIView!
+    var popupLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,6 @@ extension ViewController {
     func showView() {
         // 添加带透明度的背景视图，从而实现下方视图变暗
         guard let window = UIApplication.shared.keyWindow else { return }
-        NSLog("%@", window)
         bkgView = UIView()
         bkgView.frame = window.bounds
         bkgView.backgroundColor = UIColor(white: 0.1, alpha: 0.6)
@@ -74,6 +74,7 @@ extension ViewController {
             self.popupView.frame = CGRect(x: 30, y: kScreenHeight, width: kScreenWidth-60, height: 60)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.popupView.removeFromSuperview()
                 self.bkgView.removeFromSuperview()
             }
         }
