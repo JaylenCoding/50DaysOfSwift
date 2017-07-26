@@ -73,6 +73,7 @@ extension ViewController {
             // 尾随闭包播放弹出动画
             self.popupView.frame = CGRect(x: 30, y: kScreenHeight, width: kScreenWidth-60, height: 60)
             
+            // 提交一个延时任务线程
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 self.popupView.removeFromSuperview()
                 self.bkgView.removeFromSuperview()
