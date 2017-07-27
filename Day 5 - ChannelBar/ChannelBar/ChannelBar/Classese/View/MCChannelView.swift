@@ -26,6 +26,7 @@ class MCChannelView: UIView {
         var offsetX: CGFloat = kChannelMargin
         
         for model in channels {
+            // 创建label
             let label = UILabel()
             
             label.text = model
@@ -40,6 +41,13 @@ class MCChannelView: UIView {
             frame.size.height = 35
             label.frame = frame
             
+            // 给label添加点击手势
+            // 注意，要开启label的用户交互
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelClicked))
+            label.addGestureRecognizer(tapGesture)
+            label.isUserInteractionEnabled = true
+            
+            // 添加到视图
             self.scrollView.addSubview(label)
             
             offsetX += label.frame.size.width + kChannelMargin
@@ -48,6 +56,10 @@ class MCChannelView: UIView {
         // 设置滚动视图的滚动距离
         scrollView.contentSize = CGSize(width: offsetX, height: 35)
         
+    }
+    
+    func labelClicked() {
+        NSLog("Label Clicked")
     }
 
 }
