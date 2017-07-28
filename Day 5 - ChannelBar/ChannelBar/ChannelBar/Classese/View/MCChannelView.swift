@@ -116,6 +116,25 @@ class MCChannelView: UIView {
         // 根据比例设置在14-18区间的字号
         let fontSize = 14 + (18-14) * scale
         label.transform = CGAffineTransform(scaleX: fontSize / 14, y: fontSize / 14)
+        
+        // 将label移动至中央
+        self.scrollToCenter(label)
+    }
+    
+    
+    /// 将label滑动至scrollView正中的方法
+    ///
+    /// - Parameter view: 对应的label
+    func scrollToCenter(_ view: UIView) {
+        
+        var offsetX = view.center.x - self.scrollView.frame.size.width * 0.5
+        
+        // 如果标签旁边没有剩余标签，则不滚动
+        if offsetX < 0 {
+            offsetX = 0
+        }
+        
+        self.scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
     }
 
 }
