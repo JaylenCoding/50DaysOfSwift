@@ -91,14 +91,18 @@ class MCChannelView: UIView {
         delegate.channelView(self, forItemAt: index)
         
         // 点击时，让点击的放大，其他缩小
-        for i in 0..<self.scrollView.subviews.count {
-            let label = self.scrollView.subviews[i]
-            if label == gesture.view {
-                self.setScale(withScale: 1, forIndex: i)
-            } else {
-                self.setScale(withScale: 0, forIndex: i)
+        UIView.animate(withDuration: 0.3) { 
+            for i in 0..<self.scrollView.subviews.count {
+                let label = self.scrollView.subviews[i]
+                if label == gesture.view {
+                    self.setScale(withScale: 1, forIndex: i)
+                } else {
+                    self.setScale(withScale: 0, forIndex: i)
+                }
             }
         }
+        
+        self.scrollToCenter(view)
     }
     
     

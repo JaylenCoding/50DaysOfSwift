@@ -44,6 +44,8 @@ extension ViewController {
         let label:UILabel = cell.viewWithTag(100) as! UILabel
         label.text = self.channels[indexPath.item]
         
+        cell.sizeToFit()
+        
         return cell
     }
     
@@ -79,6 +81,9 @@ extension ViewController {
         // 构造要滚动到的位置对应的indexPath
         let indexPath = IndexPath(item: index, section: 0)
         
+        // 为了让点击的时候按钮能慢慢变大而不调用scrollViewDidScroll直接变大，要先不调用该方法
+        self.collectionView.delegate = nil
         self.collectionView.scrollToItem(at: indexPath, at: .init(rawValue: 0), animated: false)
+        self.collectionView.delegate = self
     }
 }
