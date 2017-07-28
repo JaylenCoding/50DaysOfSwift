@@ -59,8 +59,10 @@ extension ViewController {
         let scale: CGFloat = ratio - CGFloat(index)
         
         // 修改channelView的大小
-        self.channelView.setScale(withScale: scale, forIndex: index+1)
-        self.channelView.setScale(withScale: 1 - scale, forIndex: index)
+        if index+1 < self.channels.count {
+            self.channelView.setScale(withScale: scale, forIndex: index+1)
+            self.channelView.setScale(withScale: 1 - scale, forIndex: index)
+        }
     }
 }
 

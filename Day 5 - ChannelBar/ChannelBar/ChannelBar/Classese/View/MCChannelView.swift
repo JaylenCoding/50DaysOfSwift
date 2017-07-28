@@ -57,11 +57,14 @@ class MCChannelView: UIView {
             self.scrollView.addSubview(label)
             
             offsetX += label.frame.size.width + kChannelMargin
+            
         }
         
         // 设置滚动视图的滚动距离
         scrollView.contentSize = CGSize(width: offsetX, height: 35)
         
+        // 设置初始label索引值
+        self.setScale(withScale: 1, forIndex: 0)
     }
     
     func labelClicked(withGesture gesture: UITapGestureRecognizer) {
@@ -86,6 +89,16 @@ class MCChannelView: UIView {
         guard let delegate = self.delegate else { return }
         // 传给控制器
         delegate.channelView(self, forItemAt: index)
+        
+        // 点击时，让点击的放大，其他缩小
+        for i in 0..<self.scrollView.subviews.count {
+            let label = self.scrollView.subviews[i]
+            if label == gesture.view {
+                self.setScale(withScale: 1, forIndex: i)
+            } else {
+                self.setScale(withScale: 0, forIndex: i)
+            }
+        }
     }
     
     
