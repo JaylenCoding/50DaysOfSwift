@@ -46,6 +46,18 @@ extension ViewController {
         
         return cell
     }
+    
+    // 当滑动的时候的响应
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 计算整体的比例
+        let ratio: CGFloat = scrollView.contentOffset.x / scrollView.frame.size.width
+        
+        // 计算出索引值
+        let index: Int = Int(ratio)
+        
+        // 计算变化的比例
+        let scale: CGFloat = ratio - CGFloat(index)
+    }
 }
 
 // 实现滑动条方法(以实现视图对控制器操作)
