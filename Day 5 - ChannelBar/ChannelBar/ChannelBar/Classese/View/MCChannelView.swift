@@ -10,9 +10,15 @@ import UIKit
 
 let kChannelMargin: CGFloat = 10
 
+protocol MCChannelViewDelegate {
+    func channelView(_ channelView: MCChannelView, forItemAt index: Int)
+}
+
 class MCChannelView: UIView {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    var delegate: MCChannelViewDelegate?
     
     // 外界设置channel时，就会调用这个方法
     var channels: Array<String> = Array<String>() {
@@ -43,7 +49,7 @@ class MCChannelView: UIView {
             
             // 给label添加点击手势
             // 注意，要开启label的用户交互
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelClicked))
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelClicked(withGesture:)))
             label.addGestureRecognizer(tapGesture)
             label.isUserInteractionEnabled = true
             
@@ -58,8 +64,28 @@ class MCChannelView: UIView {
         
     }
     
-    func labelClicked() {
-        NSLog("Label Clicked")
+    func labelClicked(withGesture gesture: UITapGestureRecognizer) {
+        
+        // 由于点击了按钮是想让页面变化，故在此应该将点击事件抛给控制器
+        
+        // 使用守护语句保证操作安全
+        // 获取点击的索引值
+        guard let view = gesture.view,
+            let index: Int = self.scrollView.subviews.index(of: view)
+        else { return }
+        
+        // 传值给控制器
+        /*
+         * 视图传值给控制器主要有以下方法：
+         * 1) 通过闭包
+         * 2) 通过协议
+         * 3) 通过消息
+         */
+        
+        // 使用守护语法判断是否遵守了协议以及是否实现协议
+        guard let delegate = self.delegate else { return }
+        // 传给控制器
+        delegate.channelView(self, forItemAt: index)
     }
 
 }

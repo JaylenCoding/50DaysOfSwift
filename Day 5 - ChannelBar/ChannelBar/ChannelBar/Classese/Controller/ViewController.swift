@@ -10,7 +10,7 @@ import UIKit
 
 let cellId = "cellId"
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MCChannelViewDelegate {
     
     @IBOutlet weak var channelView: MCChannelView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,11 +22,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         self.channelView.channels = channels
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        // 设置频道条的代理
+        self.channelView.delegate = self
     }
 
 
 }
 
+// 实现表格方法
 extension ViewController {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,5 +45,22 @@ extension ViewController {
         label.text = self.channels[indexPath.item]
         
         return cell
+    }
+}
+
+// 实现滑动条方法(以实现视图对控制器操作)
+extension ViewController {
+    
+    /// 实现频道条操作时collocationView同步切换的方法
+    ///
+    /// - Parameters:
+    ///   - channelView: 操作对应的channelView
+    ///   - index: 切换到的view的索引值
+    func channelView(_ channelView: MCChannelView, forItemAt index: Int) {
+        
+        // 构造要滚动到的位置对应的indexPath
+        let indexPath = IndexPath(item: index, section: 0)
+        
+        self.collectionView.scrollToItem(at: indexPath, at: .init(rawValue: 0), animated: false)
     }
 }
