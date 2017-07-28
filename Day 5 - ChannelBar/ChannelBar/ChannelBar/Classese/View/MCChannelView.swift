@@ -87,5 +87,22 @@ class MCChannelView: UIView {
         // 传给控制器
         delegate.channelView(self, forItemAt: index)
     }
+    
+    
+    /// 响应设置label比例的方法
+    ///
+    /// - Parameters:
+    ///   - scale: 变换的比例
+    ///   - index: 当前页面索引
+    func setScale(withScale scale: CGFloat, forIndex index: Int) {
+        
+        let label = self.scrollView.subviews[index] as! UILabel
+        
+        label.textColor = UIColor.init(red: scale, green: 0, blue: 0, alpha: 1)
+        
+        // 根据比例设置在14-18区间的字号
+        let fontSize = 14 + (18-14) * scale
+        label.transform = CGAffineTransform(scaleX: fontSize / 14, y: fontSize / 14)
+    }
 
 }

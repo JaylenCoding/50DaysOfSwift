@@ -57,6 +57,10 @@ extension ViewController {
         
         // 计算变化的比例
         let scale: CGFloat = ratio - CGFloat(index)
+        
+        // 修改channelView的大小
+        self.channelView.setScale(withScale: scale, forIndex: index+1)
+        self.channelView.setScale(withScale: 1 - scale, forIndex: index)
     }
 }
 
