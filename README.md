@@ -24,6 +24,14 @@ Point: Collection View, UICollectionViewDelegate，lazy，enum、Storyboard
 
 <br></br>
 
+## Day 5 - Channel Bar
+```
+Point: ScrollView, Protocol, CollectionView, MVC, extension/ convience, Delegate, StoryBoard
+```
+![Day 5 - Channel Bar](https://github.com/Minecodecraft/50DaysOfSwift/blob/master/Day%205%20-%20ChannelBar/ChannelBar.gif)
+
+<br></br>
+
 ## Day 3 - Show My Location
 ```
 Point: CoreLocation, VisualBlurEffect
