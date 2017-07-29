@@ -8,6 +8,14 @@ One demo a day, keep coding for 50 days with Swift. The struggle of a growing iO
 
 # Project GIFs Showcase
 
+## Day 7 - PopUp & FadeOut
+```
+Point: Animation, Block, Pop-up View
+```
+![Day 7 - PopUp & FadeOut](https://github.com/Minecodecraft/50DaysOfSwift/blob/master/Day%207%20-%20PopUp%26FadeOut/PopUp%26FadeOut.gif)
+
+<br></br>
+
 ## Day 6 - Movable Collection View
 ```
 Point: Collection View, UICollectionViewDelegate，lazy，enum、Storyboard
