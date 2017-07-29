@@ -22,6 +22,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 由于采用深色背景，状态栏设置浅色
+        UIApplication.shared.statusBarStyle = .lightContent
         
     }
     
