@@ -24,6 +24,14 @@ Point: Collection View, UICollectionViewDelegate，lazy，enum、Storyboard
 
 <br></br>
 
+## Day 3 - Show My Location
+```
+Point: CoreLocation, VisualBlurEffect
+```
+![Day 3 - Show My Location](https://github.com/Minecodecraft/50DaysOfSwift/blob/master/Day%203%20-%20ShowMyLocation/ShowMyLocation.gif)
+
+<br></br>
+
 ## Day 2 - Controlled Button
 ```
 Point: Animation、Layer、Button、UIGestureRecongnizer
