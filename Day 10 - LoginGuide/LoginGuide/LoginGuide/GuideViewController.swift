@@ -24,9 +24,9 @@ class GuideViewController: UIViewController, UICollectionViewDataSource, UIColle
     let guideCell = "guideCellId"
     let loginCell = "loginCellId"
     lazy var pages: [PageItem] = [
-        PageItem(dict: ["imageName":"moreInfo", "title":"Do more you want", "detail":"Do more of what you always wanted.\nExplore and discover groups in your area that are all about the things you love."]),
-        PageItem(dict: ["imageName":"moreInspir", "title":"Get inspired, stay inspired", "detail":"Meetup with people who love what you love\nand keep the conversation going."]),
-        PageItem(dict: ["imageName":"moreSimpler", "title":"Simpler than ever", "detail":"Simpler than ever to start your own.\nCreate the perfect Meetup for you. Meetup gets you members and makes it easy."])
+        PageItem(dict: ["imageName":"moreInfo", "title":"发现更多", "detail":"在这里发现更多，做你想做的。\nE浏览附近感兴趣的群体，并加入他们。"]),
+        PageItem(dict: ["imageName":"moreInspir", "title":"更多灵感，更多思路", "detail":"遇见更多志同道合者。\n并与他们保持联系。"]),
+        PageItem(dict: ["imageName":"moreSimpler", "title":"更加简洁", "detail":"比以前更加简洁\n为你打造更加便捷的使用体验，更加轻松的找到你想要的。"])
     ]
     
     override func viewDidLoad() {
