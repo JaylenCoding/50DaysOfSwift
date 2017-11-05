@@ -71,7 +71,7 @@ extension ViewController {
 // 实现滑动条方法(以实现视图对控制器操作)
 extension ViewController {
     
-    /// 实现频道条操作时collocationView同步切换的方法
+    /// 实现频道条操作时collectionView同步切换的方法
     ///
     /// - Parameters:
     ///   - channelView: 操作对应的channelView
