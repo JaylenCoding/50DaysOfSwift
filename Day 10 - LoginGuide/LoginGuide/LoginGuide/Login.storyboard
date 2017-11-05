@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nrH-6M-A3q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="DzD-Tq-b4m">
+            <objects>
+                <viewController id="nrH-6M-A3q" customClass="LoginViewController" customModule="LoginGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tOF-Ra-arc"/>
+                        <viewControllerLayoutGuide type="bottom" id="K5c-5e-Hov"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pAK-Bg-Znk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="R3u-HE-81H">
+                                <rect key="frame" x="123" y="96" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YsF-d3-cfQ"/>
+                                    <constraint firstAttribute="width" constant="128" id="hlO-uh-YJT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号或邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-UK-9cv" customClass="LoginTextField" customModule="LoginGuide" customModuleProvider="target">
+                                <rect key="frame" x="75" y="313" width="225" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Qp1-aE-fxY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PS-jk-JCw" customClass="LoginTextField" customModule="LoginGuide" customModuleProvider="target">
+                                <rect key="frame" x="75.5" y="377" width="225" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="pRl-R8-78r"/>
+                                    <constraint firstAttribute="height" constant="40" id="vYN-7n-gMz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni2-33-WWR">
+                                <rect key="frame" x="74.5" y="452" width="225" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zbr-o7-r0T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="立即登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2cz-UK-9cv" firstAttribute="width" secondItem="pAK-Bg-Znk" secondAttribute="width" multiplier="0.6" id="2ws-zj-s4r"/>
+                            <constraint firstItem="Ni2-33-WWR" firstAttribute="centerX" secondItem="pAK-Bg-Znk" secondAttribute="centerX" id="5dp-Tj-GbG"/>
+                            <constraint firstItem="6PS-jk-JCw" firstAttribute="top" secondItem="2cz-UK-9cv" secondAttribute="bottom" constant="24" id="9FF-SO-Zz3"/>
+                            <constraint firstItem="2cz-UK-9cv" firstAttribute="centerX" secondItem="pAK-Bg-Znk" secondAttribute="centerX" id="BFS-oO-bzD"/>
+                            <constraint firstItem="Ni2-33-WWR" firstAttribute="top" secondItem="6PS-jk-JCw" secondAttribute="bottom" constant="35" id="Fk3-pS-reB"/>
+                            <constraint firstItem="6PS-jk-JCw" firstAttribute="centerX" secondItem="pAK-Bg-Znk" secondAttribute="centerX" id="gne-e9-hmh"/>
+                            <constraint firstItem="R3u-HE-81H" firstAttribute="top" secondItem="pAK-Bg-Znk" secondAttribute="top" constant="96" id="lob-4H-dJs"/>
+                            <constraint firstItem="2cz-UK-9cv" firstAttribute="centerY" secondItem="pAK-Bg-Znk" secondAttribute="centerY" id="mon-Xe-OsJ"/>
+                            <constraint firstItem="Ni2-33-WWR" firstAttribute="width" secondItem="2cz-UK-9cv" secondAttribute="width" id="oWn-rY-aUQ"/>
+                            <constraint firstItem="R3u-HE-81H" firstAttribute="centerX" secondItem="pAK-Bg-Znk" secondAttribute="centerX" id="wiF-0y-urg"/>
+                            <constraint firstItem="6PS-jk-JCw" firstAttribute="width" secondItem="2cz-UK-9cv" secondAttribute="width" id="xqY-7C-QVZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c73-0A-ZFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="960" height="854"/>
+    </resources>
+</document>
