@@ -37,11 +37,16 @@ class MainNavigationController: UINavigationController {
     
     @objc func showGuideController() {
         let storyboard = UIStoryboard(name: "Guide", bundle: nil)
-        let guideVC = storyboard.instantiateInitialViewController() as! ViewController
+        let guideVC = storyboard.instantiateInitialViewController() as! GuideViewController
         
         present(guideVC, animated: false) {
             // do something
         }
+    }
+    
+    func finishShowGuideController() {
+        dismiss(animated: false, completion: nil)
+        showLoginController()
     }
     
     @objc func showLoginController() {

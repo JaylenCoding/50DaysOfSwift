@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class GuideViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // Widget
     @IBOutlet weak var collectionView: UICollectionView!
@@ -46,6 +46,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     fileprivate func setButton() {
         continueButton.addTarget(self, action: #selector(pageSkipHandler(sender:)), for: .touchUpInside)
         skipButton.addTarget(self, action: #selector(pageSkipHandler(sender:)), for: .touchUpInside)
+        
     }
     
     @objc func pageSkipHandler(sender: UIButton) {
@@ -102,10 +103,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         })
     }
     
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        let indexPath = IndexPath(item: pageControl.currentPage, section: 0)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.01) {
+            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+    }
+    
+    deinit {
+        print("\(self) has been deinit")
+    }
+    
 }
 
 // MARK: - UICollectionViewDelegate and UICollectionViewDatasource impeletation
-extension ViewController {
+extension GuideViewController {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
