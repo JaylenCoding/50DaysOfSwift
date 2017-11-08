@@ -28,11 +28,11 @@ class MainNavigationController: UINavigationController {
     }
     
     func isFirstRun() -> Bool {
-        return true
+        return !UserDefaults.standard.bool(forKey: "hasFirstRun")
     }
     
     func isLoggedIn() -> Bool {
-        return false
+        return UserDefaults.standard.bool(forKey: "isLoggedIn")
     }
     
     @objc func showGuideController() {
@@ -45,6 +45,9 @@ class MainNavigationController: UINavigationController {
     }
     
     func finishShowGuideController() {
+        UserDefaults.standard.set(true, forKey: "hasFirstRun")
+        UserDefaults.standard.synchronize()
+        
         dismiss(animated: false, completion: nil)
         showLoginController()
     }
@@ -56,6 +59,13 @@ class MainNavigationController: UINavigationController {
         present(loginVC, animated: false) {
             // do something
         }
+    }
+    
+    func finishLoginHandler() {
+        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
+        
+        // FIXME: <Do something to handle login>
     }
 
 }

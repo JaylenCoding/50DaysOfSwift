@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="DzD-Tq-b4m">
             <objects>
-                <viewController id="nrH-6M-A3q" customClass="LoginViewController" customModule="LoginGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nrH-6M-A3q" customClass="LoginViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tOF-Ra-arc"/>
                         <viewControllerLayoutGuide type="bottom" id="K5c-5e-Hov"/>
@@ -34,7 +34,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号或邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-UK-9cv" customClass="LoginTextField" customModule="LoginGuide" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号或邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-UK-9cv" customClass="LoginTextField" customModule="LoginView" customModuleProvider="target">
                                 <rect key="frame" x="56.5" y="308" width="262.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Qp1-aE-fxY"/>
@@ -42,8 +42,11 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nrH-6M-A3q" id="PeG-Oh-NGD"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PS-jk-JCw" customClass="LoginTextField" customModule="LoginGuide" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PS-jk-JCw" customClass="LoginTextField" customModule="LoginView" customModuleProvider="target">
                                 <rect key="frame" x="57" y="382" width="262.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vYN-7n-gMz"/>
@@ -51,6 +54,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nrH-6M-A3q" id="fEw-Hb-Tfm"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni2-33-WWR">
                                 <rect key="frame" x="56" y="467" width="262.5" height="50"/>

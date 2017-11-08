@@ -22,6 +22,7 @@
 		E7B48E0E1FB358FC00EA299D /* LoginViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B48E001FB358FC00EA299D /* LoginViewCell.xib */; };
 		E7B48E0F1FB358FC00EA299D /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48E011FB358FC00EA299D /* LoginTextField.swift */; };
 		E7B48E111FB3593200EA299D /* Guide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B48E101FB3593200EA299D /* Guide.storyboard */; };
+		E7B48E131FB35B8500EA299D /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DF41FB358FB00EA299D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,11 +75,11 @@
 		E7B48DB91FB20CD600EA299D /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				E7B48DFF1FB358FC00EA299D /* Home.storyboard */,
+				E7B48DF11FB358FB00EA299D /* Login.storyboard */,
 				E7B48E101FB3593200EA299D /* Guide.storyboard */,
 				E7B48DF41FB358FB00EA299D /* Assets.xcassets */,
 				E7B48DF81FB358FC00EA299D /* GuideViewController.swift */,
-				E7B48DFF1FB358FC00EA299D /* Home.storyboard */,
-				E7B48DF11FB358FB00EA299D /* Login.storyboard */,
 				E7B48E011FB358FC00EA299D /* LoginTextField.swift */,
 				E7B48DF51FB358FB00EA299D /* LoginViewCell.swift */,
 				E7B48E001FB358FC00EA299D /* LoginViewCell.xib */,
@@ -170,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B48E131FB35B8500EA299D /* Assets.xcassets in Sources */,
 				E7B48E041FB358FC00EA299D /* MainNavigationController.swift in Sources */,
 				E7B48E0F1FB358FC00EA299D /* LoginTextField.swift in Sources */,
 				E7B48DBB1FB20CD600EA299D /* AppDelegate.swift in Sources */,
