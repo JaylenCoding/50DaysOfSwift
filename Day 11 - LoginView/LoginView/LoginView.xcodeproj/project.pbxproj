@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		E7B48DBB1FB20CD600EA299D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DBA1FB20CD600EA299D /* AppDelegate.swift */; };
-		E7B48DBD1FB20CD600EA299D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DBC1FB20CD600EA299D /* ViewController.swift */; };
-		E7B48DC01FB20CD600EA299D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B48DBE1FB20CD600EA299D /* Main.storyboard */; };
-		E7B48DC21FB20CD600EA299D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B48DC11FB20CD600EA299D /* Assets.xcassets */; };
 		E7B48DC51FB20CD600EA299D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B48DC31FB20CD600EA299D /* LaunchScreen.storyboard */; };
+		E7B48E021FB358FC00EA299D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B48DF11FB358FB00EA299D /* Login.storyboard */; };
+		E7B48E031FB358FC00EA299D /* PageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DF21FB358FB00EA299D /* PageViewCell.swift */; };
+		E7B48E041FB358FC00EA299D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DF31FB358FB00EA299D /* MainNavigationController.swift */; };
+		E7B48E051FB358FC00EA299D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B48DF41FB358FB00EA299D /* Assets.xcassets */; };
+		E7B48E061FB358FC00EA299D /* LoginViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DF51FB358FB00EA299D /* LoginViewCell.swift */; };
+		E7B48E071FB358FC00EA299D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DF61FB358FB00EA299D /* LoginViewController.swift */; };
+		E7B48E081FB358FC00EA299D /* PageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DF71FB358FC00EA299D /* PageItem.swift */; };
+		E7B48E091FB358FC00EA299D /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48DF81FB358FC00EA299D /* GuideViewController.swift */; };
+		E7B48E0A1FB358FC00EA299D /* PageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B48DF91FB358FC00EA299D /* PageViewCell.xib */; };
+		E7B48E0D1FB358FC00EA299D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B48DFF1FB358FC00EA299D /* Home.storyboard */; };
+		E7B48E0E1FB358FC00EA299D /* LoginViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B48E001FB358FC00EA299D /* LoginViewCell.xib */; };
+		E7B48E0F1FB358FC00EA299D /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B48E011FB358FC00EA299D /* LoginTextField.swift */; };
+		E7B48E111FB3593200EA299D /* Guide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B48E101FB3593200EA299D /* Guide.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E7B48DB71FB20CD600EA299D /* LoginView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B48DBA1FB20CD600EA299D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7B48DBC1FB20CD600EA299D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E7B48DBF1FB20CD600EA299D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E7B48DC11FB20CD600EA299D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7B48DC41FB20CD600EA299D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7B48DC61FB20CD600EA299D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B48DF11FB358FB00EA299D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		E7B48DF21FB358FB00EA299D /* PageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewCell.swift; sourceTree = "<group>"; };
+		E7B48DF31FB358FB00EA299D /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		E7B48DF41FB358FB00EA299D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7B48DF51FB358FB00EA299D /* LoginViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewCell.swift; sourceTree = "<group>"; };
+		E7B48DF61FB358FB00EA299D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E7B48DF71FB358FC00EA299D /* PageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItem.swift; sourceTree = "<group>"; };
+		E7B48DF81FB358FC00EA299D /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		E7B48DF91FB358FC00EA299D /* PageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewCell.xib; sourceTree = "<group>"; };
+		E7B48DFF1FB358FC00EA299D /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		E7B48E001FB358FC00EA299D /* LoginViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewCell.xib; sourceTree = "<group>"; };
+		E7B48E011FB358FC00EA299D /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		E7B48E101FB3593200EA299D /* Guide.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Guide.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +74,20 @@
 		E7B48DB91FB20CD600EA299D /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				E7B48E101FB3593200EA299D /* Guide.storyboard */,
+				E7B48DF41FB358FB00EA299D /* Assets.xcassets */,
+				E7B48DF81FB358FC00EA299D /* GuideViewController.swift */,
+				E7B48DFF1FB358FC00EA299D /* Home.storyboard */,
+				E7B48DF11FB358FB00EA299D /* Login.storyboard */,
+				E7B48E011FB358FC00EA299D /* LoginTextField.swift */,
+				E7B48DF51FB358FB00EA299D /* LoginViewCell.swift */,
+				E7B48E001FB358FC00EA299D /* LoginViewCell.xib */,
+				E7B48DF61FB358FB00EA299D /* LoginViewController.swift */,
+				E7B48DF31FB358FB00EA299D /* MainNavigationController.swift */,
+				E7B48DF71FB358FC00EA299D /* PageItem.swift */,
+				E7B48DF21FB358FB00EA299D /* PageViewCell.swift */,
+				E7B48DF91FB358FC00EA299D /* PageViewCell.xib */,
 				E7B48DBA1FB20CD600EA299D /* AppDelegate.swift */,
-				E7B48DBC1FB20CD600EA299D /* ViewController.swift */,
-				E7B48DBE1FB20CD600EA299D /* Main.storyboard */,
-				E7B48DC11FB20CD600EA299D /* Assets.xcassets */,
 				E7B48DC31FB20CD600EA299D /* LaunchScreen.storyboard */,
 				E7B48DC61FB20CD600EA299D /* Info.plist */,
 			);
@@ -96,7 +126,7 @@
 				TargetAttributes = {
 					E7B48DB61FB20CD600EA299D = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -123,9 +153,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B48E0E1FB358FC00EA299D /* LoginViewCell.xib in Resources */,
+				E7B48E0A1FB358FC00EA299D /* PageViewCell.xib in Resources */,
 				E7B48DC51FB20CD600EA299D /* LaunchScreen.storyboard in Resources */,
-				E7B48DC21FB20CD600EA299D /* Assets.xcassets in Resources */,
-				E7B48DC01FB20CD600EA299D /* Main.storyboard in Resources */,
+				E7B48E051FB358FC00EA299D /* Assets.xcassets in Resources */,
+				E7B48E111FB3593200EA299D /* Guide.storyboard in Resources */,
+				E7B48E021FB358FC00EA299D /* Login.storyboard in Resources */,
+				E7B48E0D1FB358FC00EA299D /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +170,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B48DBD1FB20CD600EA299D /* ViewController.swift in Sources */,
+				E7B48E041FB358FC00EA299D /* MainNavigationController.swift in Sources */,
+				E7B48E0F1FB358FC00EA299D /* LoginTextField.swift in Sources */,
 				E7B48DBB1FB20CD600EA299D /* AppDelegate.swift in Sources */,
+				E7B48E061FB358FC00EA299D /* LoginViewCell.swift in Sources */,
+				E7B48E091FB358FC00EA299D /* GuideViewController.swift in Sources */,
+				E7B48E071FB358FC00EA299D /* LoginViewController.swift in Sources */,
+				E7B48E031FB358FC00EA299D /* PageViewCell.swift in Sources */,
+				E7B48E081FB358FC00EA299D /* PageItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E7B48DBE1FB20CD600EA299D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7B48DBF1FB20CD600EA299D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E7B48DC31FB20CD600EA299D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -274,12 +306,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LoginView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = blog.minecode.LoginView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,12 +323,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LoginView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = blog.minecode.LoginView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

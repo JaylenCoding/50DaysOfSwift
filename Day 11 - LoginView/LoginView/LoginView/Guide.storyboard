@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Guide View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GuideViewController" customModule="LoginGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mYA-Rl-UXP"/>
+                        <viewControllerLayoutGuide type="bottom" id="SF4-JR-FsL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MMY-ZC-fuK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="aXT-H9-uX8">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="73y-xe-nqf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4KE-sQ-NSW"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Lu2-Ii-XGo">
+                                <rect key="frame" x="0.0" y="637" width="375" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="HNH-8K-apo"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vq-zj-BjI">
+                                <rect key="frame" x="320" y="20" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WZs-Lf-gzu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="继续">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ad-vt-Ted">
+                                <rect key="frame" x="20" y="20" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="W3z-iX-uXj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="跳过">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ad-vt-Ted" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="2RZ-hr-AWI"/>
+                            <constraint firstItem="SF4-JR-FsL" firstAttribute="top" secondItem="Lu2-Ii-XGo" secondAttribute="bottom" constant="10" id="7r4-CJ-YQo"/>
+                            <constraint firstItem="7Vq-zj-BjI" firstAttribute="top" secondItem="mYA-Rl-UXP" secondAttribute="bottom" id="9Xx-P6-DDe"/>
+                            <constraint firstItem="4ad-vt-Ted" firstAttribute="top" secondItem="mYA-Rl-UXP" secondAttribute="bottom" id="Am6-zB-kZr"/>
+                            <constraint firstItem="MMY-ZC-fuK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F5m-hq-HOy"/>
+                            <constraint firstItem="MMY-ZC-fuK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="O4q-aX-edz"/>
+                            <constraint firstAttribute="trailing" secondItem="Lu2-Ii-XGo" secondAttribute="trailing" id="PDp-gc-dfW"/>
+                            <constraint firstItem="Lu2-Ii-XGo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z0w-WM-GqT"/>
+                            <constraint firstItem="7Vq-zj-BjI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="ha5-25-uon"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4ad-vt-Ted" secondAttribute="trailing" constant="20" symbolic="YES" id="mbr-eO-suv"/>
+                            <constraint firstAttribute="trailing" secondItem="7Vq-zj-BjI" secondAttribute="trailing" constant="20" id="mcQ-1M-gyf"/>
+                            <constraint firstItem="SF4-JR-FsL" firstAttribute="top" secondItem="MMY-ZC-fuK" secondAttribute="bottom" id="w2Q-zf-cdb"/>
+                            <constraint firstAttribute="trailing" secondItem="MMY-ZC-fuK" secondAttribute="trailing" id="yGD-Tw-Mpx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="MMY-ZC-fuK" id="U3D-Uv-lKs"/>
+                        <outlet property="continueButton" destination="7Vq-zj-BjI" id="QOF-yn-28v"/>
+                        <outlet property="continueButtonTop" destination="9Xx-P6-DDe" id="Tht-Kv-wMo"/>
+                        <outlet property="pageControl" destination="Lu2-Ii-XGo" id="ffS-x0-wEq"/>
+                        <outlet property="pageControlBottom" destination="7r4-CJ-YQo" id="bDb-Ep-6no"/>
+                        <outlet property="skipButton" destination="4ad-vt-Ted" id="lm6-fZ-Xis"/>
+                        <outlet property="skipButtonTop" destination="Am6-zB-kZr" id="H8k-il-Ku1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="161"/>
+        </scene>
+    </scenes>
+</document>
