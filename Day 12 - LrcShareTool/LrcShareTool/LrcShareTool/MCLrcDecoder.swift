@@ -27,7 +27,13 @@ class MCLrcDecoder: NSObject {
         var sepArray = lrcString.components(separatedBy: "[");
         var lineArray = [String]()
         for i in 0..<sepArray.count {
-            
+            if sepArray[i].count > 0 {
+                lineArray = sepArray[i].components(separatedBy: "]");
+                if (lineArray[i] != "\n") {
+                    self.timeArray.append(lineArray[0])
+                    self.lrcArray.append(lineArray.count>1 ? lineArray[1] : "")
+                }
+            }
         }
     }
     
