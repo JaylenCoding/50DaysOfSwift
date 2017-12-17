@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NG4-oK-paV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NG4-oK-paV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,6 +33,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364" y="30.134932533733135"/>
+        </scene>
+        <!--ShareVC-->
+        <scene sceneID="ZUi-v2-vAo">
+            <objects>
+                <viewController storyboardIdentifier="LrcShareVC" id="jb3-ch-Z8i" customClass="MCShareVC" customModule="LrcShareTool" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Gb-kw-eUh"/>
+                        <viewControllerLayoutGuide type="bottom" id="9GO-3k-Zzo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i44-2s-y3g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc8-LY-2QV">
+                                <rect key="frame" x="0.0" y="617" width="186.5" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G2w-bo-Sjq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhj-Ib-rqB">
+                                <rect key="frame" x="188" y="617" width="186.5" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DlR-dn-3jR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-en-j9f">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9GO-3k-Zzo" firstAttribute="top" secondItem="dc8-LY-2QV" secondAttribute="bottom" id="CX9-TF-JYU"/>
+                            <constraint firstItem="mhj-Ib-rqB" firstAttribute="width" secondItem="i44-2s-y3g" secondAttribute="width" multiplier="0.5" constant="-1" id="Djj-Jq-QRx"/>
+                            <constraint firstItem="dc8-LY-2QV" firstAttribute="leading" secondItem="i44-2s-y3g" secondAttribute="leading" id="GAY-9U-J63"/>
+                            <constraint firstAttribute="trailing" secondItem="mhj-Ib-rqB" secondAttribute="trailing" id="Uqi-rI-iTM"/>
+                            <constraint firstItem="iDd-en-j9f" firstAttribute="top" secondItem="9Gb-kw-eUh" secondAttribute="bottom" id="e51-zM-HBi"/>
+                            <constraint firstItem="dc8-LY-2QV" firstAttribute="top" secondItem="iDd-en-j9f" secondAttribute="bottom" id="ggZ-Si-dFX"/>
+                            <constraint firstAttribute="trailing" secondItem="iDd-en-j9f" secondAttribute="trailing" id="qXg-M8-59T"/>
+                            <constraint firstItem="iDd-en-j9f" firstAttribute="leading" secondItem="i44-2s-y3g" secondAttribute="leading" id="sHl-PJ-NIs"/>
+                            <constraint firstItem="dc8-LY-2QV" firstAttribute="width" secondItem="i44-2s-y3g" secondAttribute="width" multiplier="0.5" constant="-1" id="vU7-vd-lWK"/>
+                            <constraint firstItem="9GO-3k-Zzo" firstAttribute="top" secondItem="mhj-Ib-rqB" secondAttribute="bottom" id="vlw-hQ-nhy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="mhj-Ib-rqB" id="oNr-Wh-E17"/>
+                        <outlet property="scrollView" destination="iDd-en-j9f" id="4i5-Qn-OcD"/>
+                        <outlet property="shareButton" destination="dc8-LY-2QV" id="855-8Z-UGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8b-X4-lu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138.4000000000001" y="30.134932533733135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tZC-uh-u3M">

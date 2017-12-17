@@ -20,16 +20,16 @@ class MCLrcDecoder: NSObject {
     public func loadLrc(fileName: String) -> NSString {
         let filePath = Bundle.main.path(forResource: fileName, ofType: "lrc")
         let data = NSData.init(contentsOfFile: filePath!)
-        return NSString.init(data: data! as Data, encoding: String.Encoding.utf8.rawValue)!
+        return NSString(data: data! as Data, encoding: String.Encoding.utf8.rawValue)!
     }
     
-    private func decodeLrc(lrcString: String) {
-        var sepArray = lrcString.components(separatedBy: "[");
+    func decodeLrc(lrcString: NSString) {
+        var sepArray = lrcString.components(separatedBy: "[")
         var lineArray = [String]()
         for i in 0..<sepArray.count {
             if sepArray[i].count > 0 {
                 lineArray = sepArray[i].components(separatedBy: "]");
-                if (lineArray[i] != "\n") {
+                if (lineArray[0] != "\n") {
                     self.timeArray.append(lineArray[0])
                     self.lrcArray.append(lineArray.count>1 ? lineArray[1] : "")
                 }

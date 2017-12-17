@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E74CF8501FE6A4C500FD3194 /* shareBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = E74CF84F1FE6A4C500FD3194 /* shareBkg.png */; };
+		E7C97E0D1FDEE328005B48BB /* song.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E7C97E0C1FDEE328005B48BB /* song.lrc */; };
 		E7F14F8C1FD67AEB001769AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F14F8B1FD67AEB001769AD /* AppDelegate.swift */; };
 		E7F14F911FD67AEB001769AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F14F8F1FD67AEB001769AD /* Main.storyboard */; };
 		E7F14F931FD67AEB001769AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F14F921FD67AEB001769AD /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E74CF84F1FE6A4C500FD3194 /* shareBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareBkg.png; sourceTree = "<group>"; };
+		E7C97E0C1FDEE328005B48BB /* song.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = song.lrc; sourceTree = "<group>"; };
 		E7F14F881FD67AEB001769AD /* LrcShareTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LrcShareTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F14F8B1FD67AEB001769AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F14F901FD67AEB001769AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 		E7F14F8A1FD67AEB001769AD /* LrcShareTool */ = {
 			isa = PBXGroup;
 			children = (
+				E7C97E0C1FDEE328005B48BB /* song.lrc */,
+				E74CF84F1FE6A4C500FD3194 /* shareBkg.png */,
 				E7F14F8B1FD67AEB001769AD /* AppDelegate.swift */,
 				E7F14F8F1FD67AEB001769AD /* Main.storyboard */,
 				E7F14F9D1FD67EF5001769AD /* MCLrcVC.swift */,
@@ -137,6 +143,8 @@
 			files = (
 				E7F14F961FD67AEB001769AD /* LaunchScreen.storyboard in Resources */,
 				E7F14F931FD67AEB001769AD /* Assets.xcassets in Resources */,
+				E74CF8501FE6A4C500FD3194 /* shareBkg.png in Resources */,
+				E7C97E0D1FDEE328005B48BB /* song.lrc in Resources */,
 				E7F14F911FD67AEB001769AD /* Main.storyboard in Resources */,
 				E7F14FA81FD68089001769AD /* MCLrcCell.xib in Resources */,
 			);
